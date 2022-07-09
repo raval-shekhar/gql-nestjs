@@ -27,8 +27,10 @@ export class PostService {
   }
 
   async findAllAndCount(condition, { page, limit }: PaginationInput): Promise<{ total: number, posts: any }> {
-    const total = await this.model.find(condition).countDocuments();
-    const posts = await this.model.find(condition).skip((page - 1) * limit).limit(limit).populate('user');
+    const [total, posts] = await Promise.all([
+      this.model.find(condition).countDocuments(),
+      this.model.find(condition).skip((page - 1) * limit).limit(limit).populate('user'),
+    ])
     return { total, posts }
   }
 }
