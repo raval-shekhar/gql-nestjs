@@ -4,8 +4,8 @@
 git clone https://github.com/raval-shekhar/gql-nestjs.git
 ```
 ## Prerequisite
-  - Nodejs lastes version (Nodejs)[https://nodejs.org/en/] 
-  - MongoDB Atlas account (Atlas)[https://account.mongodb.com/account/login]
+  - Nodejs lastes version [Nodejs](https://nodejs.org/en/)
+  - MongoDB Atlas account [Atlas](https://account.mongodb.com/account/login)
 ## Frontend
 - Navigate to client folder and run following command
 ```
