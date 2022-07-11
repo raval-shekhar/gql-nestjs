@@ -8,6 +8,8 @@ import { join } from 'path';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
+      playground: true,
+      introspection: true,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       formatError: (error: GraphQLError) => {
         if (error.message === 'VALIDATION_ERROR') {
